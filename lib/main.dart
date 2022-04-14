@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
         "/": (_) => HomePage(),
         "/page1": (_) => Settings(),
         "/page2": (_) => CartPage(),
+        "/dash": (_) => Dashboard(),
       },
     );
   }

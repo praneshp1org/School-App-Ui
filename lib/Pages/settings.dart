@@ -5,8 +5,10 @@ class Settings extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text("Welcome to Settings"),
+    return Center(
+      child: Container(
+        child: Text("Welcome to Settings Page"),
+      ),
     );
   }
 }

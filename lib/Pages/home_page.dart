@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:school_app/Pages/cart_page.dart';
+import 'package:school_app/Pages/entryPage.dart';
 import 'package:school_app/Pages/settings.dart';
 
 class HomePage extends StatefulWidget {
@@ -22,6 +23,12 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          //Navigator.pushNamed(context, "/dash");
+        },
+        child: Icon(Icons.camera_alt_outlined),
+      ),
       drawer: Drawer(),
       bottomNavigationBar: BottomNavigationBar(
           onTap: (int value) {
@@ -52,9 +59,7 @@ class _HomePageState extends State<HomePage> {
         title: Text("Homepage"),
       ),
       body: selIndex == 0
-          ? Center(
-              child: Text("Welcome to HomePage"),
-            )
+          ? EntryPage()
           : selIndex == 1
               ? CartPage()
               : selIndex == 2

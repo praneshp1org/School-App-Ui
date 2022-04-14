@@ -5,8 +5,10 @@ class CartPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text("Cart Page"),
+    return Center(
+      child: Container(
+        child: Text("Welcome to Cart Page"),
+      ),
     );
   }
 }
