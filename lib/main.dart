@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:school_app/Pages/dashboard.dart';
 import 'package:school_app/Pages/home_page.dart';
-import 'package:school_app/Pages/page1.dart';
-import 'package:school_app/Pages/page2.dart';
+import 'package:school_app/Pages/settings.dart';
+import 'package:school_app/Pages/cart_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,8 +24,8 @@ class MyApp extends StatelessWidget {
       //initialRoute: "/",
       routes: {
         "/": (_) => HomePage(),
-        "/page1": (_) => Page1(),
-        "/page2": (_) => Page2(),
+        "/page1": (_) => Settings(),
+        "/page2": (_) => CartPage(),
       },
     );
   }

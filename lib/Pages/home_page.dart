@@ -1,7 +1,8 @@
 //import 'dart:html';
 
 import 'package:flutter/material.dart';
-import 'package:school_app/Pages/page1.dart';
+import 'package:school_app/Pages/cart_page.dart';
+import 'package:school_app/Pages/settings.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -11,7 +12,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int selIndex = 1;
+  int selIndex = 0;
   void setValue(int a) {
     setState(() {
       selIndex = a;
@@ -34,8 +35,9 @@ class _HomePageState extends State<HomePage> {
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
             BottomNavigationBarItem(
                 icon: Icon(Icons.shopping_cart), label: 'Cart'),
-            BottomNavigationBarItem(icon: Icon(Icons.info), label: 'Info'),
-            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.settings), label: 'Settings'),
+            //BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
           ]),
       appBar: AppBar(
         actions: [
@@ -49,15 +51,15 @@ class _HomePageState extends State<HomePage> {
                 icon: Icon(Icons.menu_book))),
         title: Text("Homepage"),
       ),
-      body: Center(
-        child: RaisedButton(
-          onPressed: () {
-            Navigator.popAndPushNamed(context, "/page1");
-            //selIndex++;
-          },
-          child: Text("Change index"),
-        ),
-      ),
+      body: selIndex == 0
+          ? Center(
+              child: Text("Welcome to HomePage"),
+            )
+          : selIndex == 1
+              ? CartPage()
+              : selIndex == 2
+                  ? Settings()
+                  : Text("Hell"),
     );
   }
 }
