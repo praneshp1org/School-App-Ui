@@ -95,6 +95,7 @@ class _DashboardState extends State<Dashboard> {
                 child: GridView.count(
                   crossAxisCount: 2,
                   shrinkWrap: true,
+                  physics: ScrollPhysics(),
                   children: [
                     Padding(
                       padding: const EdgeInsets.all(8.0),
