@@ -1,4 +1,7 @@
+//import 'dart:html';
+
 import 'package:flutter/material.dart';
+import 'package:school_app/Pages/page1.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -16,7 +19,9 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Center(
         child: RaisedButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.popAndPushNamed(context, "/page1");
+          },
           child: Text("Go to Page1"),
         ),
       ),

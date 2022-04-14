@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:school_app/Pages/dashboard.dart';
+import 'package:school_app/Pages/home_page.dart';
+import 'package:school_app/Pages/page1.dart';
+import 'package:school_app/Pages/page2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +20,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.indigo,
       ),
-      home: Dashboard(),
+      //home: HomePage(),
+      //initialRoute: "/",
+      routes: {
+        "/": (_) => HomePage(),
+        "/page1": (_) => Page1(),
+        "/page2": (_) => Page2(),
+      },
     );
   }
 }
