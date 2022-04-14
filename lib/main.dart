@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       //home: HomePage(),
       //initialRoute: "/",
       routes: {
-        "/": (_) => HomePage(),
+        "/": (_) => Dashboard(),
         "/page1": (_) => Settings(),
         "/page2": (_) => CartPage(),
         "/dash": (_) => Dashboard(),
