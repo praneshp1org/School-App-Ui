@@ -16,9 +16,9 @@ class _DashboardState extends State<Dashboard> {
         title: Text("DASHBOARD"),
         elevation: 0,
         //centerTitle: true,
-        actions: [
+        actions: const [
           Padding(
-            padding: const EdgeInsets.all(5.0),
+            padding: EdgeInsets.all(5.0),
             child: Icon(Icons.notifications_active_outlined),
           ),
         ],
