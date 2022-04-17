@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> {
           selectedItemColor: Colors.orange,
           unselectedItemColor: Colors.black54,
           showUnselectedLabels: true,
-          items: [
+          items: const [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
             BottomNavigationBarItem(
                 icon: Icon(Icons.shopping_cart), label: 'Cart'),
@@ -48,7 +48,7 @@ class _HomePageState extends State<HomePage> {
             //BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
           ]),
       appBar: AppBar(
-        actions: [
+        actions: const [
           Icon(Icons.shopping_cart),
         ],
         leading: Builder(

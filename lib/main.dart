@@ -6,6 +6,7 @@ import 'package:school_app/Pages/home_page.dart';
 import 'package:school_app/Pages/settings.dart';
 import 'package:school_app/Pages/cart_page.dart';
 import 'package:school_app/Pages/splash_screen.dart';
+import 'package:school_app/Pages/tabbar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
       //home: HomePage(),
       //initialRoute: "/",
       routes: {
-        "/": (_) => Splash(),
+        "/": (_) => Tabbed(),
         "/page1": (_) => Settings(),
         "/page2": (_) => Esewa(),
         "/dash": (_) => Dashboard(),
