@@ -9,10 +9,21 @@ class Splash extends StatefulWidget {
 
 class _SplashState extends State<Splash> {
   @override
+  void initState() {
+    super.initState();
+    Future.delayed(Duration(seconds: 3), () {
+      Navigator.popAndPushNamed(context, "/page2");
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text("e-Shop"),
+        child: Text(
+          "e-Shop",
+          textScaleFactor: 3,
+        ),
       ),
     );
   }
