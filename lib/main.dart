@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:school_app/Pages/dashboard.dart';
+import 'package:school_app/Pages/dummy_page.dart';
 import 'package:school_app/Pages/esewa.dart';
 import 'package:school_app/Pages/home_page.dart';
 import 'package:school_app/Pages/settings.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
       //home: HomePage(),
       //initialRoute: "/",
       routes: {
-        "/": (_) => Esewa(),
+        "/": (_) => DummyPage(),
         "/page1": (_) => Settings(),
         "/page2": (_) => CartPage(),
         "/dash": (_) => Dashboard(),
